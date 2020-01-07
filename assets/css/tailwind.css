@@ -1,0 +1,52 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* GLOBAL */
+
+h1 {
+    @apply text-2xl font-bold pb-1;
+}
+
+input, button {
+    @apply rounded-sm outline-none border border-white px-2 py-1 font-semibold;
+}
+
+button {
+    &:hover {
+       @apply cursor-pointer;
+    }
+}
+
+a {
+    @apply text-white font-bold text-xl mx-2;
+    &:hover {
+       @apply cursor-pointer;
+    }
+}
+
+.nuxt-link-exact-active {
+    @apply cursor-pointer underline;
+}
+
+
+/* CUSTOM CLASSES */
+
+.container-top {
+    @apply min-h-screen flex justify-center items-start text-center mx-auto;
+}
+
+.container-middle {
+    @apply min-h-screen flex justify-center items-center text-center mx-auto;
+}
+
+.page-header {
+    @apply flex justify-around items-center w-full bg-gray-500 h-12;
+    & h1 { 
+        @apply text-white;
+      }
+}
+
+.button-white {
+    @apply bg-transparent text-white;
+}

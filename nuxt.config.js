@@ -45,9 +45,20 @@ export default {
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
+    postcss: {
+      plugins: {
+      'postcss-url': false,
+      'postcss-import': true,
+      'postcss-nested': {},
+      'postcss-responsive-type': {},
+      'postcss-hexrgba': {}
+    },
+      preset: {
+         autoprefixer: {
+         grid: true
+        }
+      }
+    },
     extend (config, ctx) {
     }
   }
